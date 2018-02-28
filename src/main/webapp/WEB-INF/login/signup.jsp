@@ -38,6 +38,7 @@
                     <input type="hidden" name="csrf_token" value="${csrf_token}">
 
                     <%-- Eingabefelder --%>
+                    <h1>Logindaten: </h1>
                     <label for="signup_username">
                         Benutzername:
                         <span class="required">*</span>
@@ -56,6 +57,7 @@
                     </label>
                     <input type="password" name="signup_password2" value="${signup_form.values["signup_password2"][0]}">
                  
+                    <h1>Anschrift: </h1>
                     <label for="name">
                         Vor- und Nachname:
                         <span class="required">*</span>
@@ -84,6 +86,9 @@
                     <button class="icon-pencil" type="submit">
                         Registrieren
                     </button>
+                    
+                    <h1>Kontaktdaten: </h1>
+                    <h3>E-Mail: asdf@asdf.de</h3>
                 </div>
 
                 <%-- Fehlermeldungen --%>
