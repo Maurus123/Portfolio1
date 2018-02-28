@@ -7,14 +7,14 @@
  * Dieser Quellcode ist lizenziert unter einer
  * Creative Commons Namensnennung 4.0 International Lizenz.
  */
-package dhbwka.wwi.vertsys.javaee.jtodo.web;
+package dhbwka.wwi.vertsys.javaee.jToBuy.web;
 
-import dhbwka.wwi.vertsys.javaee.jtodo.ejb.CategoryBean;
-import dhbwka.wwi.vertsys.javaee.jtodo.ejb.TaskBean;
-import dhbwka.wwi.vertsys.javaee.jtodo.ejb.UserBean;
-import dhbwka.wwi.vertsys.javaee.jtodo.ejb.ValidationBean;
-import dhbwka.wwi.vertsys.javaee.jtodo.jpa.Task;
-import dhbwka.wwi.vertsys.javaee.jtodo.jpa.TaskStatus;
+import dhbwka.wwi.vertsys.javaee.jToBuy.ejb.CategoryBean;
+import dhbwka.wwi.vertsys.javaee.jToBuy.ejb.TaskBean;
+import dhbwka.wwi.vertsys.javaee.jToBuy.ejb.UserBean;
+import dhbwka.wwi.vertsys.javaee.jToBuy.ejb.ValidationBean;
+import dhbwka.wwi.vertsys.javaee.jToBuy.jpa.Task;
+import dhbwka.wwi.vertsys.javaee.jToBuy.jpa.TaskStatus;
 import java.io.IOException;
 import java.sql.Date;
 import java.sql.Time;

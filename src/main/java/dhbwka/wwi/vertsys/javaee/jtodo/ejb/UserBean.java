@@ -7,9 +7,9 @@
  * Dieser Quellcode ist lizenziert unter einer
  * Creative Commons Namensnennung 4.0 International Lizenz.
  */
-package dhbwka.wwi.vertsys.javaee.jtodo.ejb;
+package dhbwka.wwi.vertsys.javaee.jToBuy.ejb;
 
-import dhbwka.wwi.vertsys.javaee.jtodo.jpa.User;
+import dhbwka.wwi.vertsys.javaee.jToBuy.jpa.User;
 import javax.annotation.Resource;
 import javax.annotation.security.RolesAllowed;
 import javax.ejb.EJBContext;
@@ -50,7 +50,7 @@ public class UserBean {
         }
 
         User user = new User(username, password);
-        user.addToGroup("todo-app-user");
+        user.addToGroup("ToBuy-app-user");
         em.persist(user);
     }
 
@@ -61,7 +61,7 @@ public class UserBean {
      * @param newPassword
      * @throws UserBean.InvalidCredentialsException
      */
-    @RolesAllowed("todo-app-user")
+    @RolesAllowed("ToBuy-app-user")
     public void changePassword(String username, String oldPassword, String newPassword) throws InvalidCredentialsException {
         User user = em.find(User.class, username);
 

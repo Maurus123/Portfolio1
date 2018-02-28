@@ -7,7 +7,7 @@
  * Dieser Quellcode ist lizenziert unter einer
  * Creative Commons Namensnennung 4.0 International Lizenz.
  */
-package dhbwka.wwi.vertsys.javaee.jtodo.jpa;
+package dhbwka.wwi.vertsys.javaee.jToBuy.jpa;
 
 import java.io.Serializable;
 import java.math.BigInteger;
@@ -34,7 +34,7 @@ import javax.validation.constraints.Size;
  * Datenbankklasse für einen Benutzer.
  */
 @Entity
-@Table(name = "JTODO_USER")
+@Table(name = "JToBuy_USER")
 public class User implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -55,7 +55,7 @@ public class User implements Serializable {
 
     @ElementCollection
     @CollectionTable(
-            name = "JTODO_USER_GROUP",
+            name = "JToBuy_USER_GROUP",
             joinColumns = @JoinColumn(name = "USERNAME")
     )
     @Column(name = "GROUPNAME")
