@@ -70,7 +70,7 @@
         <c:choose>
             <c:when test="${empty tasks}">
                 <p>
-                    Es wurden keine Aufgaben gefunden. 🐈
+                    Es wurden keine Aufgaben gefunden. ☺
                 </p>
             </c:when>
             <c:otherwise>
