@@ -26,6 +26,5 @@ public class UserServlet extends HttpServlet {
             
     @EJB
     UserBean userBean;
-    
-    
+       
 }
