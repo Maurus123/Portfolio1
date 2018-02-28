@@ -30,7 +30,7 @@
 
     <jsp:attribute name="content">
         <p>
-            Das hat leider nicht geklappt. 🐻
+            Das hat leider nicht geklappt. ⛔
         </p>
     </jsp:attribute>
 </template:base>
