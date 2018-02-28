@@ -52,6 +52,26 @@ public class User implements Serializable {
     @Column(name = "PASSWORD_HASH", length = 64)
     @NotNull(message = "Das Passwort darf nicht leer sein.")
     private String passwordHash;
+    
+    @Column(name = "name", length = 64)
+    @Size(min = 5, max = 64, message = "Der Name muss zwischen fünf und 64 Zeichen lang sein.")
+    @NotNull(message = "Der Name darf nicht leer sein.")
+    private String name;
+    
+    @Column(name = "suh", length = 64)
+    @Size(min = 5, max = 64, message = "Der Straßennamen muss zwischen fünf und 64 Zeichen lang sein.")
+    @NotNull(message = "Der Straßennamen darf nicht leer sein.")
+    private String suh;
+    
+    @Column(name = "plz", length = 64)
+    @Size(min = 5, max = 64, message = "Die Postleitzahl muss fünf Zeichen lang sein.")
+    @NotNull(message = "Der Postleitzahl darf nicht leer sein.")
+    private String plz;
+    
+    @Column(name = "ort", length = 64)
+    @Size(min = 1, max = 64, message = "Der Ort muss zwischen einem und 64 Zeichen lang sein.")
+    @NotNull(message = "Der Ort darf nicht leer sein.")
+    private String ort;
 
     @ElementCollection
     @CollectionTable(
@@ -64,14 +84,19 @@ public class User implements Serializable {
     @OneToMany(mappedBy = "owner", fetch = FetchType.LAZY, cascade = CascadeType.REMOVE)
     List<Task> tasks = new ArrayList<>();
 
+
     //<editor-fold defaultstate="collapsed" desc="Konstruktoren">
     public User() {
     }
 
-    public User(String username, String password) {
+    public User(String username, String password, String name, String suh, String plz, String ort) {
         this.username = username;
         this.password = password;
         this.passwordHash = this.hashPassword(password);
+        this.name = name;
+        this.suh = suh;
+        this.plz = plz;
+        this.ort = ort;
     }
     //</editor-fold>
 
