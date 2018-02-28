@@ -17,10 +17,10 @@
     <jsp:attribute name="title">
         <c:choose>
             <c:when test="${edit}">
-                Aufgabe bearbeiten
+                Angebot anzeigen
             </c:when>
             <c:otherwise>
-                Aufgabe anlegen
+                Angebot anlegen
             </c:otherwise>
         </c:choose>
     </jsp:attribute>
@@ -98,6 +98,27 @@
                 <div class="side-by-side">
                     <textarea name="task_long_text"><c:out value="${task_form.values['task_long_text'][0]}"/></textarea>
                 </div>
+                
+                <label for="preis">
+                    Preis: 
+                    <span class="required">*</span>
+                </label>
+                <div class="side-by-side margin">
+                    <select name="preis">
+                        
+                    </select>
+                
+               </div>
+                
+                 <label for="task_short_text">
+                    in €
+                    <span class="required">*</span>
+                </label>
+               <div class="side-by-side">
+                    <input type="text" name="task_short_text" value="${task_form.values["task_short_text"][0]}">
+                </div>
+                
+                
 
                 <%-- Button zum Abschicken --%>
                 <div class="side-by-side">
@@ -106,12 +127,26 @@
                     </button>
 
                     <c:if test="${edit}">
-                        <button class="icon-trash" type="submit" name="action" value="delete">
+                        <!--<button class="icon-trash" type="submit" name="action" value="delete">
                             Löschen
                         </button>
+                        -->
                     </c:if>
+              
                 </div>
-            </div>
+                <label class="side-by-side">
+                    Angelegt am:
+                    ${task_form.values["task_due_date"][0]}
+                    ${task_form.values["task_due_time"][0]}
+                    
+                </label>
+                    
+                    <label class="side-by-side">
+                    Anbieter:
+                    ${task_form.values["task_owner"][0]}
+                    
+                </label>
+                
 
             <%-- Fehlermeldungen --%>
             <c:if test="${!empty task_form.errors}">

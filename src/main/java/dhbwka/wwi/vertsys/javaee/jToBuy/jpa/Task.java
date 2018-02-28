@@ -53,10 +53,10 @@ public class Task implements Serializable {
     @NotNull
     private String longText;
 
-    @NotNull(message = "Das Datum darf nicht leer sein.")
+   // @NotNull(message = "Das Datum darf nicht leer sein.")
     private Date dueDate;
 
-    @NotNull(message = "Die Uhrzeit darf nicht leer sein.")
+    //@NotNull(message = "Die Uhrzeit darf nicht leer sein.")
     private Time dueTime;
 
     @Enumerated(EnumType.STRING)

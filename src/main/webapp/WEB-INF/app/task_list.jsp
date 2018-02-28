@@ -83,7 +83,7 @@
                             <th>Kategorie</th>
                             <th>Eigentümer</th>
                             <th>Status</th>
-                            <th>Fällig am</th>
+                          <!--  <th>Fällig am</th> -->
                         </tr>
                     </thead>
                     <c:forEach items="${tasks}" var="task">
@@ -102,10 +102,10 @@
                             <td>
                                 <c:out value="${task.status.label}"/>
                             </td>
-                            <td>
+                           <td>
                                 <c:out value="${utils.formatDate(task.dueDate)}"/>
                                 <c:out value="${utils.formatTime(task.dueTime)}"/>
-                            </td>
+                           </td>
                         </tr>
                     </c:forEach>
                 </table>
