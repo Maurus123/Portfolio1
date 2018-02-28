@@ -42,11 +42,11 @@
                 <input type="hidden" name="csrf_token" value="${csrf_token}">
 
                 <%-- Eingabefelder --%>
-                <label for="task_owner">Eigentümer:</label>
+                <!--<label for="task_owner">Eigentümer:</label>
                 <div class="side-by-side">
                     <input type="text" name="task_owner" value="${task_form.values["task_owner"][0]}" readonly="readonly">
                 </div>
-
+                -->
                 <label for="task_category">Kategorie:</label>
                 <div class="side-by-side">
                     <select name="task_category">
@@ -59,18 +59,19 @@
                         </c:forEach>
                     </select>
                 </div>
-
+                <!--
                 <label for="task_due_date">
                     Fällig am:
                     <span class="required">*</span>
                 </label>
+                
                 <div class="side-by-side">
                     <input type="text" name="task_due_date" value="${task_form.values["task_due_date"][0]}">
                     <input type="text" name="task_due_time" value="${task_form.values["task_due_time"][0]}">
                 </div>
-
+                -->
                 <label for="task_status">
-                    Status:
+                    Art des Angebots: 
                     <span class="required">*</span>
                 </label>
                 <div class="side-by-side margin">
