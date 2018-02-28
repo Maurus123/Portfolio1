@@ -52,7 +52,7 @@ public class User implements Serializable {
     @Column(name = "PASSWORD_HASH", length = 64)
     @NotNull(message = "Das Passwort darf nicht leer sein.")
     private String passwordHash;
-    
+/*   
     @Column(name = "name", length = 64)
     @Size(min = 5, max = 64, message = "Der Name muss zwischen fünf und 64 Zeichen lang sein.")
     @NotNull(message = "Der Name darf nicht leer sein.")
@@ -72,7 +72,7 @@ public class User implements Serializable {
     @Size(min = 1, max = 64, message = "Der Ort muss zwischen einem und 64 Zeichen lang sein.")
     @NotNull(message = "Der Ort darf nicht leer sein.")
     private String ort;
-
+*/
     @ElementCollection
     @CollectionTable(
             name = "JToBuy_USER_GROUP",
@@ -89,14 +89,14 @@ public class User implements Serializable {
     public User() {
     }
 
-    public User(String username, String password, String name, String suh, String plz, String ort) {
+    public User(String username, String password/*, String name, String suh, String plz, String ort*/) {
         this.username = username;
         this.password = password;
         this.passwordHash = this.hashPassword(password);
-        this.name = name;
+    /*    this.name = name;
         this.suh = suh;
         this.plz = plz;
-        this.ort = ort;
+        this.ort = ort;*/
     }
     //</editor-fold>
 
