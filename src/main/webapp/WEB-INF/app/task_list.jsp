@@ -70,7 +70,7 @@
         <c:choose>
             <c:when test="${empty tasks}">
                 <p>
-                    Es wurden keine Aufgaben gefunden. ☕
+                    Es wurden keine Produkte gefunden. ☕
                 </p>
             </c:when>
             <c:otherwise>
@@ -82,8 +82,8 @@
                             <th>Bezeichnung</th>
                             <th>Kategorie</th>
                             <th>Eigentümer</th>
-                            <th>Status</th>
-                          <!--  <th>Fällig am</th> -->
+                            <th>Art</th>
+                            <th>Erstellt</th>
                         </tr>
                     </thead>
                     <c:forEach items="${tasks}" var="task">
