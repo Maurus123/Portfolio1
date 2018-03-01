@@ -128,9 +128,9 @@ public class TaskEditServlet extends HttpServlet {
             }
         }
 
-        Date dueDate = WebUtils.parseDate(taskDueDate);
-        Time dueTime = WebUtils.parseTime(taskDueTime);
-
+        //Date dueDate = WebUtils.parseDate(taskDueDate);
+        //Time dueTime = WebUtils.parseTime(taskDueTime);
+/*
         if (dueDate != null) {
             task.setDueDate(dueDate);
         } else {
@@ -142,7 +142,7 @@ public class TaskEditServlet extends HttpServlet {
         } else {
             errors.add("Die Uhrzeit muss dem Format hh:mm:ss entsprechen.");
         }
-
+*/
         try {
             task.setStatus(TaskStatus.valueOf(taskStatus));
         } catch (IllegalArgumentException ex) {
