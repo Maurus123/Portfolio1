@@ -23,7 +23,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Hendrik
  */
-@WebServlet(urlPatterns = {"app/user/"})
+@WebServlet(urlPatterns = {"/user/"})
 public class UserServlet extends HttpServlet {
     @EJB
     ValidationBean validationBean;
