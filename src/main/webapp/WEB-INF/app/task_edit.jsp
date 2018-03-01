@@ -104,9 +104,15 @@
                     <span class="required">*</span>
                 </label>
                 <div class="side-by-side margin">
+                    <div class="side-by-side margin">
                     <select name="preis">
-                        
+                        <c:forEach items="${values}" var="status">
+                            <option value="${value}" ${task_form.values["preis"][0] == value ? 'selected' : ''}>
+                                <c:out value="${value.label}"/>
+                            </option>
+                        </c:forEach>
                     </select>
+                </div>
                 
                </div>
                 
